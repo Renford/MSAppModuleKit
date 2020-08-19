@@ -13,7 +13,7 @@
 #import <Foundation/Foundation.h>
 
 NS_SWIFT_NAME(MSAppSettingsProtocol)
-@protocol MSAppSettings <NSObject>
+@protocol MSAppSettingsProtocol <NSObject>
 
 @optional
 @property (nonatomic, strong, readwrite) NSString *mainURLScheme;
@@ -23,7 +23,7 @@ NS_SWIFT_NAME(MSAppSettingsProtocol)
 
 
 // @abstract
-@interface MSAppSettings : NSObject <MSAppSettings>
+@interface MSAppSettings : NSObject <MSAppSettingsProtocol>
 
 // `+appSettings` is gone when converted to Swift
 //

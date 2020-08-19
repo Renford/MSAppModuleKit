@@ -30,7 +30,7 @@ MSAppModuleController *appModuleManager;
 @interface MSAppModuleController ()
 
 @property (nonatomic, strong) JLRoutes *routes;
-@property (nonatomic, strong, readwrite) id<MSAppSettings> appSettings;
+@property (nonatomic, strong, readwrite) id<MSAppSettingsProtocol> appSettings;
 
 @end
 
@@ -48,7 +48,7 @@ MSAppModuleController *appModuleManager;
     return appModuleManager;
 }
 
-+ (instancetype)appModuleControllerWithSettings:(id<MSAppSettings>)appSettings {
++ (instancetype)appModuleControllerWithSettings:(id<MSAppSettingsProtocol>)appSettings {
     [MSAppModuleController defaultAppModuleManager].appSettings = appSettings;
 
     return appModuleManager;

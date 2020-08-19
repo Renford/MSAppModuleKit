@@ -28,9 +28,9 @@ MS_MODULE_EXTERN MSAppModuleController *appModuleManager;
     NSMutableDictionary *_externalUrlSchemeDict;
 }
 
-@property (nonatomic, strong, readonly) id<MSAppSettings> appSettings;
+@property (nonatomic, strong, readonly) id<MSAppSettingsProtocol> appSettings;
 
-+ (instancetype)appModuleControllerWithSettings:(id<MSAppSettings>)appSettings;
++ (instancetype)appModuleControllerWithSettings:(id<MSAppSettingsProtocol>)appSettings;
 
 - (id<MSAppModule>)appModuleWithModuleName:(NSString *)moduleName;
 - (id<MSAppModule>)appModuleWithModuleClass:(Class)moduleClass;
